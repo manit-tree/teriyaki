@@ -48,6 +48,20 @@ $.all(selector) : query list of elements and return Teriyaki Elements
 
 ![image](https://github.com/user-attachments/assets/ca1aaa0a-4fca-4e56-a190-e3b242619432)
 
+## Examples
+
+01. Add event handler to a button using "on" from Teriyakit Element
+
+![image](https://github.com/user-attachments/assets/30b318cf-2afd-494b-a187-37ef750feb4c)
+
+02. Set color of H1 element to "red"
+
+![image](https://github.com/user-attachments/assets/57ced975-5d3b-4b52-9298-0f8b0ef81a54)
+
+03. Add class "text-green" to all P elements
+
+![image](https://github.com/user-attachments/assets/f783d41a-ac63-485b-af07-84d276e3adb0)
+
 ## Authors
 
 - Mr.Manit Treeprapankit
