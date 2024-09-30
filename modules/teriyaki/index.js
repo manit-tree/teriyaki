@@ -26,6 +26,14 @@ $teriyaki.all = (selector) => {
     return new TeriyakiElements(document.querySelectorAll(selector));
 }
 
+$.query = (selector) => {
+    return document.querySelector(selector);
+}
+
+$.queryAll = (selector) => {
+    return document.querySelectorAll(selector);
+}
+
 $teriyaki.is_function = fnc => {
     return typeof fnc === 'function';
 }
