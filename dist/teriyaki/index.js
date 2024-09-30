@@ -26,6 +26,12 @@ var $ = function() {
   $teriyaki.all = (selector) => {
     return new TeriyakiElements(document.querySelectorAll(selector));
   };
+  $teriyaki.query = (selector) => {
+    return document.querySelector(selector);
+  };
+  $teriyaki.queryAll = (selector) => {
+    return document.querySelectorAll(selector);
+  };
   $teriyaki.is_function = (fnc) => {
     return typeof fnc === "function";
   };
@@ -137,6 +143,9 @@ var $ = function() {
       };
       document.addEventListener("DOMContentLoaded", on_content_loaded);
     }
+  };
+  $teriyaki.UUID = () => {
+    return window.crypto.randomUUID();
   };
   class Teriyaki {
     constructor(el) {

@@ -26,11 +26,11 @@ $teriyaki.all = (selector) => {
     return new TeriyakiElements(document.querySelectorAll(selector));
 }
 
-$.query = (selector) => {
+$teriyaki.query = (selector) => {
     return document.querySelector(selector);
 }
 
-$.queryAll = (selector) => {
+$teriyaki.queryAll = (selector) => {
     return document.querySelectorAll(selector);
 }
 
@@ -192,6 +192,10 @@ $teriyaki.ready = (cb) => {
 
         document.addEventListener('DOMContentLoaded', on_content_loaded);
     }
+}
+
+$teriyaki.UUID = () => {
+    return window.crypto.randomUUID();
 }
 
 class Teriyaki {
