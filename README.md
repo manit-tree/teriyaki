@@ -32,9 +32,21 @@ $.queryAll() : shortcut version of document.querySelectorAll()
 
 ![image](https://github.com/user-attachments/assets/cb401b31-0c60-4f5e-87ab-74307f6d97b3)
 
+$.default() : fallback to default value if the first argument is undefined, null for empty string.
+
+![image](https://github.com/user-attachments/assets/066b1cd3-33d7-4db4-8a23-d96552650493)
+
 $.wrap() : create wrapper around an element
 
 ![image](https://github.com/user-attachments/assets/96a025e4-f7d0-4eaf-8aba-d41e1411edb0)
+
+$(selector) : query an element and return Teriyaki Element (similar to jQuery Object)
+
+![image](https://github.com/user-attachments/assets/d9a89c38-f719-41b9-a949-169620c84bbf)
+
+$.all(selector) : query list of elements and return Teriyaki Elements
+
+![image](https://github.com/user-attachments/assets/ca1aaa0a-4fca-4e56-a190-e3b242619432)
 
 ## Authors
 
