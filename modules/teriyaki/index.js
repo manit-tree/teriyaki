@@ -198,6 +198,14 @@ $teriyaki.UUID = () => {
     return window.crypto.randomUUID();
 }
 
+$teriyaki.log = (obj) => {
+    console.log(obj);
+}
+
+$teriyai.random = (min, max) => { 
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 class Teriyaki {
     constructor(el) {
         this.el = el;
