@@ -136,6 +136,14 @@ Javascript Helper, inspired by jquery.
 
 ![image](https://github.com/user-attachments/assets/b8e626cd-fc88-4a10-b6fc-14a4107c6059)
 
+34. Using $.log(), a shortcut version of console.log()
+
+![image](https://github.com/user-attachments/assets/14f0f35f-b486-4613-8ddf-92cfebe8f7e8)
+
+35. Get random value between min and max, using $.random(min, max) (min and max included)
+
+![image](https://github.com/user-attachments/assets/1611e37c-917f-4f42-ac99-62bec78e545a)
+
 ## Authors
 
 - Mr.Manit Treeprapankit
