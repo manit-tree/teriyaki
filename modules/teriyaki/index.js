@@ -202,7 +202,7 @@ $teriyaki.log = (obj) => {
     console.log(obj);
 }
 
-$teriyai.random = (min, max) => { 
+$teriyaki.random = (min, max) => { 
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
