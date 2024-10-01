@@ -128,6 +128,10 @@ Javascript Helper, inspired by jquery.
 
 ![image](https://github.com/user-attachments/assets/f7f2efec-e63b-4b20-b31e-f235560a6d97)
 
+32. Get HTML from a URL then apply to div#app
+
+![image](https://github.com/user-attachments/assets/ee5a1dee-ebf9-4138-ab55-7f7608b173e1)
+
 ## Authors
 
 - Mr.Manit Treeprapankit
