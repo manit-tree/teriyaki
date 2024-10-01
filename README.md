@@ -60,6 +60,35 @@ Javascript Helper, inspired by jquery.
 
 ![image](https://github.com/user-attachments/assets/f783d41a-ac63-485b-af07-84d276e3adb0)
 
+14. Get UUID
+
+![image](https://github.com/user-attachments/assets/68b96a9a-2da2-4437-969d-1361e518a81e)
+
+15. Hide an element using hide() (from Teriyaki Element)
+
+![image](https://github.com/user-attachments/assets/60bc4b7d-782e-4a8c-bfd2-8d9ce5e3f5d4)
+
+16. Show hidden element using show() (from Teriyaki Element)
+ 
+![image](https://github.com/user-attachments/assets/075bf77a-0a6a-403e-bf68-c74807edd980)
+
+17. Set text of an element using text(str) (from Teriyaki Element)
+
+![image](https://github.com/user-attachments/assets/852bc711-c0d1-4825-b57e-aa4c08d8c5b2)
+
+18. Get text of an element using text() (from Teriyaki Element)
+
+![image](https://github.com/user-attachments/assets/033d4815-93d4-4ab8-8216-2697df9c9753)
+
+19. Set innerHTML of an element using html() (from Teriyaki Element)
+
+![image](https://github.com/user-attachments/assets/8b46e303-fd8f-4b65-bced-d7459a6062bb)
+
+20. Get innerHTML of an element using html() (from Teriyaki Element)
+
+![image](https://github.com/user-attachments/assets/8c75c81b-4ba2-4eaf-b92a-b33c6f3aaacf)
+
+
 ## Authors
 
 - Mr.Manit Treeprapankit
