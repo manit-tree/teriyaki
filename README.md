@@ -42,11 +42,11 @@ Javascript Helper, inspired by jquery.
 
 9. Create Teriyaki Element (similar to jQuery Object) from selector (can be either string or DOM Node)
 
-![image](https://github.com/user-attachments/assets/d9a89c38-f719-41b9-a949-169620c84bbf)
+![image](https://github.com/user-attachments/assets/82e3ddfb-13c3-47d4-ba42-a2bbc44aee60)
 
 10. Create Teriyaki Elements from selector (can be either tring or DOM Node)
 
-![image](https://github.com/user-attachments/assets/ca1aaa0a-4fca-4e56-a190-e3b242619432)
+![image](https://github.com/user-attachments/assets/cbb78c7d-fbde-486c-8ba7-b5bbfacfc212)
 
 11. Add event handler to a button using "on" from Teriyakit Element
 
