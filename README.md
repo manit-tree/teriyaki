@@ -120,6 +120,14 @@ Javascript Helper, inspired by jquery.
 
 ![image](https://github.com/user-attachments/assets/7222915b-c3f9-4c93-884b-2bb881964e5b)
 
+29. Apply CSS on H1 element
+
+![image](https://github.com/user-attachments/assets/1dee7d59-ee55-496a-9439-824c25a2b5fa)
+
+31. Set innerHTML of an element + execute JavaScript using html_unsafe()
+
+![image](https://github.com/user-attachments/assets/f7f2efec-e63b-4b20-b31e-f235560a6d97)
+
 ## Authors
 
 - Mr.Manit Treeprapankit
