@@ -132,6 +132,10 @@ Javascript Helper, inspired by jquery.
 
 ![image](https://github.com/user-attachments/assets/ee5a1dee-ebf9-4138-ab55-7f7608b173e1)
 
+33. Get Text from a URL then apply to H1 element
+
+![image](https://github.com/user-attachments/assets/b8e626cd-fc88-4a10-b6fc-14a4107c6059)
+
 ## Authors
 
 - Mr.Manit Treeprapankit
