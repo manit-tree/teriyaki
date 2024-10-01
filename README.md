@@ -88,6 +88,37 @@ Javascript Helper, inspired by jquery.
 
 ![image](https://github.com/user-attachments/assets/8c75c81b-4ba2-4eaf-b92a-b33c6f3aaacf)
 
+21. Add class "text-red" on an element using addClass() (from Teriyaki Element)
+
+![image](https://github.com/user-attachments/assets/cd088f51-937f-4fb6-bdd9-9fd7cce2256c)
+
+22. Remove clas "hilight" from LI element which has "hilight" class
+
+![image](https://github.com/user-attachments/assets/f39ed645-0a7b-489f-bb1e-22db28049942)
+
+23. Fade in div#intro with animation duration = 500ms and a callback when animation ended.
+  
+![image](https://github.com/user-attachments/assets/6237f505-f104-4d65-acaf-11aa66acf263)
+
+24. Fade out div#intro with animation duration = 500ms and a callback when animation ended.
+
+![image](https://github.com/user-attachments/assets/ed37cac3-fe6f-4dd5-9d45-a71271ab0c45)
+
+25. Set "data-role" attribute on H1 element
+
+![image](https://github.com/user-attachments/assets/69ada833-be00-4ba4-b593-d976210b245c)
+
+26. Get "data-role" attribute from H1 element 
+
+![image](https://github.com/user-attachments/assets/ca99b887-42b0-42ae-a5f4-b3960cb18871)
+
+27. Set data attribute on H1 element
+
+![image](https://github.com/user-attachments/assets/3155b049-3927-4bde-9613-7a5da1424b17)
+
+28. Get data attribute from H1 element
+
+![image](https://github.com/user-attachments/assets/7222915b-c3f9-4c93-884b-2bb881964e5b)
 
 ## Authors
 
