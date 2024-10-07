@@ -153,6 +153,12 @@ var $ = function() {
   $teriyaki.random = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
   };
+  $teriyaki.base64_encode = (str) => {
+    return btoa(str);
+  };
+  $teriyaki.base64_decode = (str) => {
+    return atob(str);
+  };
   class Teriyaki {
     constructor(el) {
       this.el = el;
