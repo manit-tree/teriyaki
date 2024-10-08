@@ -178,6 +178,27 @@ $teriyaki.post = (url, data = null) => new Promise((resolve, reject) => {
         .catch(err => reject(err));        
 })
 
+$teriyaki.post_json = (url, data, headers = {}) => new Promise((resolve, reject) => {
+    let _headers = {
+        'Content-Type': 'application/json; charset=UTF-8'
+    }
+
+    Object.keys(headers).forEach(key => {
+        _headers[key] = headers[key]
+    })
+
+    const fetch_data = {
+      method: 'POST',
+      headers: _headers,
+      body: JSON.stringify(data)
+    }
+
+    fetch(url, fetch_data)
+      .then(response => response.json())
+      .then(json => resolve(json))
+      .catch(err => reject(err));
+})
+
 $teriyaki.ready = (cb) => {
     if (document.readyState === 'complete') {
         cb();
