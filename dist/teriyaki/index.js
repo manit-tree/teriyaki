@@ -220,6 +220,17 @@ var $ = function() {
   function bit_rol(d, _) {
     return d << _ | d >>> 32 - _;
   }
+  $teriyaki.sha256 = (text) => {
+    return new Promise(async (resolve) => {
+      const utf8_text = new TextEncoder("utf-8").encode(text);
+      const hash = await crypto.subtle.digest("SHA-256", utf8_text);
+      const uint_array = new Uint32Array(hash);
+      const hex_array = Object.entries(uint_array).map((item) => {
+        return item[1].toString(16);
+      });
+      resolve(hex_array.join(""));
+    });
+  };
   class Teriyaki {
     constructor(el) {
       this.el = el;
