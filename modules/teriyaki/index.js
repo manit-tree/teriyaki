@@ -163,14 +163,10 @@ $teriyaki.get_json = (url, cached = true) => new Promise((resolve, reject) => {
 })
 
 $teriyaki.post = (url, data = null) => new Promise((resolve, reject) => {
-    let options = {};
-
-    if (!cached) {
-        options = {cache: "no-cache"}
+    let options = {
+        method: 'POST',
+        body: data
     }
-
-    options.method = 'POST';
-    options.body = data;
 
     fetch(url, options)
         .then(response => response.json())
