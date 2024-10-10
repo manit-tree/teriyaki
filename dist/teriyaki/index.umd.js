@@ -5,10 +5,10 @@
   let $teriyaki = (selector) => {
     if ($teriyaki.is_function(selector)) {
       if (document.readyState === "complete") {
-        cb();
+        selector();
       } else {
         document.addEventListener("DOMContentLoaded", () => {
-          cb();
+          selector();
         });
       }
     } else if ($teriyaki.is_string(selector)) {
@@ -20,9 +20,9 @@
     } else if ($teriyaki.is_html_element(selector)) {
       return new TeriyakiElement(selector);
     } else if ($teriyaki.is_document(selector)) {
-      return new TeriyakitDocument(selector);
+      return new TeriyakiDocument(selector);
     } else if ($teriyaki.is_window(selector)) {
-      return new TeriyakiiWindow(selector);
+      return new TeriyakiWindow(selector);
     }
   };
   $teriyaki.all = (selector) => {
@@ -87,11 +87,11 @@
       detail: data
     });
   };
-  $teriyaki.broadcast_receiver = (broadcast_channel, cb2 = null) => {
+  $teriyaki.broadcast_receiver = (broadcast_channel, cb = null) => {
     const ch = new BroadcastChannel(broadcast_channel);
-    if (typeof cb2 === "function") {
+    if (typeof cb === "function") {
       ch.onmessage = (event) => {
-        cb2(event.data);
+        cb(event.data);
       };
     }
   };
@@ -145,13 +145,13 @@
     };
     fetch(url, fetch_data).then((response) => response.json()).then((json) => resolve(json)).catch((err) => reject(err));
   });
-  $teriyaki.ready = (cb2) => {
+  $teriyaki.ready = (cb) => {
     if (document.readyState === "complete") {
-      cb2();
+      cb();
     } else {
       let on_content_loaded = () => {
         setTimeout(() => {
-          cb2();
+          cb();
         }, 100);
         document.removeEventListener("DOMContentLoaded", on_content_loaded);
       };
@@ -265,6 +265,24 @@
       return this;
     }
   }
+  class TeriyakiWindow extends Teriyaki {
+  }
+  class TeriyakiDocument extends Teriyaki {
+    ready(cb) {
+      if (document.readyState !== "loading") {
+        if ($teriyaki.is_function(cb)) {
+          cb();
+        }
+      } else {
+        document.addEventListener("DOMContentLoaded", () => {
+          if ($teriyaki.is_function(cb)) {
+            cb();
+          }
+        });
+      }
+      return this;
+    }
+  }
   class TeriyakiElement extends Teriyaki {
     addClass(cls) {
       this.el.classList.add(cls);
@@ -367,7 +385,7 @@
     height() {
       return this.el.getBoundingClientRect().height;
     }
-    fadeIn(duration = 600, cb2 = null) {
+    fadeIn(duration = 600, cb = null) {
       let keyframes = [
         { "opacity": 0 },
         { "opacity": 1 }
@@ -378,14 +396,14 @@
         fill: "both"
       };
       let animation = this.el.animate(keyframes, settings);
-      if (typeof cb2 === "function") {
+      if (typeof cb === "function") {
         animation.addEventListener("finish", (evt) => {
-          cb2();
+          cb();
         });
       }
       return this;
     }
-    fadeOut(duration = 600, cb2 = null) {
+    fadeOut(duration = 600, cb = null) {
       let keyframes = [
         { "opacity": 1 },
         { "opacity": 0 }
@@ -396,9 +414,9 @@
         fill: "both"
       };
       let animation = this.el.animate(keyframes, settings);
-      if (typeof cb2 === "function") {
+      if (typeof cb === "function") {
         animation.addEventListener("finish", (evt) => {
-          cb2();
+          cb();
         });
       }
       return this;
@@ -510,7 +528,7 @@
         });
       }
     }
-    fadeIn(duration = 600, cb2 = null) {
+    fadeIn(duration = 600, cb = null) {
       let keyframes = [
         { "opacity": 0 },
         { "opacity": 1 }
@@ -524,18 +542,18 @@
       this.elements.forEach((el) => {
         let animation = el.animate(keyframes, settings);
         animation_count++;
-        if (typeof cb2 === "function") {
+        if (typeof cb === "function") {
           animation.addEventListener("finish", (evt) => {
             animation_count = animation_count - 1;
             if (animation_count == 0) {
-              cb2();
+              cb();
             }
           });
         }
       });
       return this;
     }
-    fadeOut(duration = 600, cb2 = null) {
+    fadeOut(duration = 600, cb = null) {
       let keyframes = [
         { "opacity": 1 },
         { "opacity": 0 }
@@ -549,11 +567,11 @@
       this.elements.forEach((el) => {
         let animation = el.animate(keyframes, settings);
         animation_count++;
-        if (typeof cb2 === "function") {
+        if (typeof cb === "function") {
           animation.addEventListener("finish", (evt) => {
             animation_count = animation_count - 1;
             if (animation_count == 0) {
-              cb2();
+              cb();
             }
           });
         }

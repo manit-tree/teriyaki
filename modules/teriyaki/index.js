@@ -1,10 +1,10 @@
 let $teriyaki = (selector) => {
     if ($teriyaki.is_function(selector)) {
         if (document.readyState === 'complete') {
-            cb();
+            selector();
         } else {
             document.addEventListener('DOMContentLoaded', () => {
-                cb();
+                selector();
             })                
         }
     } else if ($teriyaki.is_string(selector)) {
@@ -16,9 +16,9 @@ let $teriyaki = (selector) => {
     } else if ($teriyaki.is_html_element(selector)) {
         return new TeriyakiElement(selector);
     } else if ($teriyaki.is_document(selector)) {
-        return new TeriyakitDocument(selector);
+        return new TeriyakiDocument(selector);
     } else if ($teriyaki.is_window(selector)) {
-        return new TeriyakiiWindow(selector);        
+        return new TeriyakiWindow(selector);        
     }
 }
 
