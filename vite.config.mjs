@@ -15,8 +15,8 @@ export default defineConfig({
         lib: {
             entry: './modules/teriyaki/index.js',
             name:'$',
-            formats: ['iife'],
-            fileName: (format) => `[name].js`
+            formats: ['iife','umd','es'],
+            fileName: (format) => `[name].[format].js`
         }
     }
 })
