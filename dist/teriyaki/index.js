@@ -101,34 +101,32 @@ var $ = function() {
     window.history.replaceState(state, null, "");
     window.history.pushState(null, null, url);
   };
-  $teriyaki.get_html = (url, cached2 = true) => new Promise((resolve, reject) => {
+  $teriyaki.get_html = (url, cached = true) => new Promise((resolve, reject) => {
     let options = {};
-    if (!cached2) {
+    if (!cached) {
       options = { cache: "no-cache" };
     }
     fetch(url, options).then((response) => response.text()).then((text) => resolve(text)).catch((err) => reject(err));
   });
-  $teriyaki.get_text = (url, cached2 = true) => new Promise((resolve, reject) => {
+  $teriyaki.get_text = (url, cached = true) => new Promise((resolve, reject) => {
     let options = {};
-    if (!cached2) {
+    if (!cached) {
       options = { cache: "no-cache" };
     }
     fetch(url, options).then((response) => response.text()).then((text) => resolve(text)).catch((err) => reject(err));
   });
-  $teriyaki.get_json = (url, cached2 = true) => new Promise((resolve, reject) => {
+  $teriyaki.get_json = (url, cached = true) => new Promise((resolve, reject) => {
     let options = {};
-    if (!cached2) {
+    if (!cached) {
       options = { cache: "no-cache" };
     }
     fetch(url, options).then((response) => response.json()).then((json) => resolve(json)).catch((err) => reject(err));
   });
   $teriyaki.post = (url, data = null) => new Promise((resolve, reject) => {
-    let options = {};
-    if (!cached) {
-      options = { cache: "no-cache" };
-    }
-    options.method = "POST";
-    options.body = data;
+    let options = {
+      method: "POST",
+      body: data
+    };
     fetch(url, options).then((response) => response.json()).then((json) => resolve(json)).catch((err) => reject(err));
   });
   $teriyaki.post_json = (url, data, headers = {}) => new Promise((resolve, reject) => {
@@ -231,6 +229,7 @@ var $ = function() {
       resolve(hex_array.join(""));
     });
   };
+  $.teriyaki.import_script = async (url, module = { exports: {} }) => (Function("module", "exports", await (await fetch(url)).text()).call(module, module, module.exports), module);
   class Teriyaki {
     constructor(el) {
       this.el = el;
