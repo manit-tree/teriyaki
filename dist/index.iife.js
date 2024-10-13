@@ -147,13 +147,11 @@ var $ = function() {
     if (document.readyState === "complete") {
       cb();
     } else {
-      let on_content_loaded = () => {
-        setTimeout(() => {
+      document.addEventListener("readystatechange", (evt) => {
+        if (document.readyState === "complete") {
           cb();
-        }, 100);
-        document.removeEventListener("DOMContentLoaded", on_content_loaded);
-      };
-      document.addEventListener("DOMContentLoaded", on_content_loaded);
+        }
+      });
     }
   };
   $teriyaki.UUID = () => {
