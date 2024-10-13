@@ -7,7 +7,7 @@ export default defineConfig({
         transformer: 'lightningcss',
     },
     build: {
-        outDir: './dist/teriyaki',
+        outDir: './dist',
         minify: false,
         sourcemap: false,
         emptyOutDir: true,   

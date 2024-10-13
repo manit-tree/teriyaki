@@ -247,7 +247,7 @@ $teriyaki.sha256 = (text) => {
     })
 }
 
-$.teriyaki.import_script = async (url, module = {exports:{}}) => (Function('module', 'exports', await (await fetch(url)).text()).call(module, module, module.exports), module);
+$teriyaki.import_script = async (url, module = {exports:{}}) => (Function('module', 'exports', await (await fetch(url)).text()).call(module, module, module.exports), module);
 
 class Teriyaki {
     constructor(el) {

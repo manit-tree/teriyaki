@@ -231,7 +231,7 @@
       resolve(hex_array.join(""));
     });
   };
-  $.teriyaki.import_script = async (url, module2 = { exports: {} }) => (Function("module", "exports", await (await fetch(url)).text()).call(module2, module2, module2.exports), module2);
+  $teriyaki.import_script = async (url, module2 = { exports: {} }) => (Function("module", "exports", await (await fetch(url)).text()).call(module2, module2, module2.exports), module2);
   class Teriyaki {
     constructor(el) {
       this.el = el;
