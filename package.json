@@ -1,5 +1,5 @@
 {
-  "name": "@8columns/teriyaki",
+  "name": "manit-tree/teriyaki",
   "version": "1.0.0",
   "description": "JavaScript Helper inspired by jQuery",
   "main": "modules/teriyaki/index.js",
