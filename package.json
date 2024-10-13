@@ -1,11 +1,11 @@
 {
-  "name": "marquee-items",
+  "name": "@8columns/teriyaki",
   "version": "1.0.0",
-  "description": "A JavaScript library for creating Marquee Items",
-  "main": "index.html",
+  "description": "JavaScript Helper inspired by jQuery",
+  "main": "modules/teriyaki/index.js",
   "scripts": {
-    "build": "vite build --config vite.config.mjs && vite build --config vite.config.min.mjs",
-    "dev": "live-server"
+    "dev": "vite",
+    "build": "vite build --config vite.config.mjs && vite build --config vite.config.min.mjs"
   },
   "keywords": [],
   "author": "",
