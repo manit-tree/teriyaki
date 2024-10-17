@@ -162,10 +162,17 @@ $teriyaki.get_json = (url, cached = true) => new Promise((resolve, reject) => {
         .catch(err => reject(err));
 })
 
-$teriyaki.post = (url, data = null) => new Promise((resolve, reject) => {
+$teriyaki.post = (url, data = null, headers = null) => new Promise((resolve, reject) => {
     let options = {
-        method: 'POST',
-        body: data
+        method: 'POST'
+    }
+
+    if (data) {
+        options.body = data;
+    }
+
+    if (headers) {
+        options.headers = headers;
     }
 
     fetch(url, options)

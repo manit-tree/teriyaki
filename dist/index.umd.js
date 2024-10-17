@@ -124,11 +124,16 @@
     }
     fetch(url, options).then((response) => response.json()).then((json) => resolve(json)).catch((err) => reject(err));
   });
-  $teriyaki.post = (url, data = null) => new Promise((resolve, reject) => {
+  $teriyaki.post = (url, data = null, headers = null) => new Promise((resolve, reject) => {
     let options = {
-      method: "POST",
-      body: data
+      method: "POST"
     };
+    if (data) {
+      options.body = data;
+    }
+    if (headers) {
+      options.headers = headers;
+    }
     fetch(url, options).then((response) => response.json()).then((json) => resolve(json)).catch((err) => reject(err));
   });
   $teriyaki.post_json = (url, data, headers = {}) => new Promise((resolve, reject) => {
